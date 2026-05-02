@@ -60,27 +60,23 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--text); font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.5; }
 
-/* ── 헤더 ── */
 .header { background: var(--card); border-bottom: 1px solid var(--border); padding: 16px 20px; position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .header-name { font-size: 18px; font-weight: 600; }
 .header-sub { font-size: 13px; color: var(--muted); }
 .updated { font-size: 11px; color: var(--muted); background: var(--bg); padding: 4px 10px; border-radius: 20px; }
 
-/* ── 탭 ── */
 .tabs { display: flex; gap: 0; padding: 0 20px; background: var(--card); border-bottom: 1px solid var(--border); overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .tabs::-webkit-scrollbar { display: none; }
 .tab-btn { flex-shrink: 0; padding: 12px 18px; font-size: 14px; font-weight: 500; color: var(--muted); background: none; border: none; border-bottom: 2.5px solid transparent; cursor: pointer; white-space: nowrap; }
 .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* ── 레이아웃 ── */
-.page { display: none; padding: 20px; max-width: 900px; margin: 0 auto; }
+.page { display: none; padding: 20px; max-width: 960px; margin: 0 auto; }
 .page.active { display: block; }
 
-/* ── 카드 ── */
 .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; margin-bottom: 14px; }
 .card-title { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 12px; }
+.card-title2 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
 
-/* ── 요약 카드 그리드 ── */
 .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 14px; }
 .stat-card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; text-align: center; }
 .stat-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
@@ -88,16 +84,14 @@ body { background: var(--bg); color: var(--text); font-family: -apple-system, 'A
 .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
 .blue { color: #2563eb; } .green { color: #16a34a; } .amber { color: #d97706; } .red { color: #dc2626; }
 
-/* ── 테이블 ── */
 .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 th { font-size: 11px; font-weight: 600; color: var(--muted); text-align: left; padding: 8px 10px; border-bottom: 1.5px solid var(--border); white-space: nowrap; }
-td { padding: 9px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 tr:last-child td { border-bottom: none; }
 .sum-row td { font-weight: 600; background: #f9f8f5; }
 tr:hover td { background: #fafaf8; }
 
-/* ── 등급 배지 ── */
 .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 22px; padding: 0 7px; border-radius: 6px; font-size: 12px; font-weight: 700; }
 .b1 { background: var(--g1-bg); color: var(--g1-text); }
 .b2 { background: var(--g2-bg); color: var(--g2-text); }
@@ -108,23 +102,58 @@ tr:hover td { background: #fafaf8; }
 .tag-up { font-size: 10px; background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 4px; margin-left: 3px; }
 .tag-dn { font-size: 10px; background: #fee2e2; color: #991b1b; padding: 1px 5px; border-radius: 4px; margin-left: 3px; }
 
-/* ── 차트 ── */
 .chart-wrap { position: relative; width: 100%; height: 260px; }
-
-/* ── 탐구 비교 ── */
 .spark-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .spark-card { background: var(--bg); border-radius: 10px; padding: 12px 14px; }
 .spark-name { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 .spark-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; font-size: 12px; }
 .spark-exam { color: var(--muted); }
-
-/* ── 구분선 ── */
 .divider { height: 1px; background: var(--border); margin: 12px 0; }
-
-/* ── 알림 배너 ── */
 .notice { background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; color: #1e40af; margin-bottom: 14px; }
+.warn { background: #fff7ed; border-left: 3px solid #f59e0b; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; color: #92400e; margin-bottom: 14px; }
 
-/* ── 모바일 ── */
+/* ── 대학 전형 탭 전용 ── */
+.uni-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.uni-btn { padding: 6px 14px; border-radius: 20px; border: 1.5px solid var(--border); background: var(--card); font-size: 13px; cursor: pointer; color: var(--muted); white-space: nowrap; }
+.uni-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+.uni-panel { display: none; }
+.uni-panel.active { display: block; }
+
+/* 합격가능성 tier badge */
+.tier { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+.tier-safe  { background: #dcfce7; color: #166534; }
+.tier-fit   { background: #dbeafe; color: #1e40af; }
+.tier-reach { background: #fef3c7; color: #92400e; }
+.tier-high  { background: #fee2e2; color: #991b1b; }
+
+/* 전형 태그 */
+.vtag { display: inline-block; background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd; border-radius: 6px; padding: 2px 8px; font-size: 11px; margin: 2px; }
+.vtag-g { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+.vtag-y { background: #fefce8; color: #854d0e; border-color: #fef08a; }
+.vtag-r { background: #fef2f2; color: #991b1b; border-color: #fecaca; }
+
+/* 전략 카드 */
+.strat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.strat-card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; border-top: 3px solid var(--accent); }
+.strat-card.green { border-top-color: #16a34a; }
+.strat-card.amber { border-top-color: #d97706; }
+.strat-card.red   { border-top-color: #dc2626; }
+.strat-head { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.strat-body { font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+
+/* 과목 상태 바 */
+.sub-bar-wrap { margin-bottom: 10px; }
+.sub-bar-label { display: flex; justify-content: space-between; font-size: 12.5px; margin-bottom: 4px; }
+.sub-bar-track { background: #f3f4f6; border-radius: 6px; height: 8px; overflow: hidden; }
+.sub-bar-fill  { height: 8px; border-radius: 6px; transition: width .4s; }
+
+/* 2-col layout */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 600px) {
+  .two-col { grid-template-columns: 1fr; }
+  .strat-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 480px) {
   .header { padding: 12px 16px; }
   .header-name { font-size: 16px; }
@@ -135,6 +164,7 @@ tr:hover td { background: #fafaf8; }
   table { font-size: 12.5px; }
   td, th { padding: 7px 8px; }
   .spark-grid { grid-template-columns: 1fr; }
+  .uni-btn { font-size: 12px; padding: 5px 10px; }
 }
 </style>
 </head>
@@ -146,54 +176,34 @@ tr:hover td { background: #fafaf8; }
     <div class="header-name">조환희 대입 대시보드</div>
     <div class="header-sub">상문고등학교 · 고2 (2026) · 2028학년도 수능</div>
   </div>
-  <div class="updated">업데이트 2026-05-02</div>
+  <div class="updated">업데이트 2026-05-03</div>
 </div>
 
 <!-- 탭 -->
 <div class="tabs">
-  <button class="tab-btn active" onclick="showPage('overview')">📊 현황</button>
-  <button class="tab-btn" onclick="showPage('naesin')">📋 내신</button>
-  <button class="tab-btn" onclick="showPage('moui')">📝 모의고사</button>
-  <button class="tab-btn" onclick="showPage('trend')">📈 추이</button>
+  <button class="tab-btn active" onclick="showPage('overview',this)">📊 현황</button>
+  <button class="tab-btn" onclick="showPage('naesin',this)">📋 내신</button>
+  <button class="tab-btn" onclick="showPage('moui',this)">📝 모의고사</button>
+  <button class="tab-btn" onclick="showPage('trend',this)">📈 추이</button>
+  <button class="tab-btn" onclick="showPage('univ',this)">🏫 대학 전형</button>
+  <button class="tab-btn" onclick="showPage('strategy',this)">🎯 지원 전략</button>
+  <button class="tab-btn" onclick="showPage('plan',this)">📚 과목 플랜</button>
 </div>
 
-<!-- ══════════ 현황 페이지 ══════════ -->
+<!-- ══════════ 현황 ══════════ -->
 <div id="page-overview" class="page active">
-
   <div class="notice">⏳ 2026년 3월 학평 수치 확인 중 · 고2 1학기 내신 업데이트 예정</div>
-
-  <!-- 핵심 지표 -->
   <div class="summary-grid">
-    <div class="stat-card">
-      <div class="stat-label">고1 내신 평균</div>
-      <div class="stat-value blue">2.18</div>
-      <div class="stat-sub">등급 (22단위 기준)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">국어 최근 등급</div>
-      <div class="stat-value amber">2</div>
-      <div class="stat-sub">2025년 10월 학평</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">수학 최근 등급</div>
-      <div class="stat-value amber">2</div>
-      <div class="stat-sub">2025년 10월 학평</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">영어 최근 등급</div>
-      <div class="stat-value green">2</div>
-      <div class="stat-sub">2025년 10월 학평</div>
-    </div>
+    <div class="stat-card"><div class="stat-label">고1 내신 평균</div><div class="stat-value blue">2.18</div><div class="stat-sub">등급 (22단위 기준)</div></div>
+    <div class="stat-card"><div class="stat-label">국어 최근 등급</div><div class="stat-value amber">2</div><div class="stat-sub">2025년 10월 학평</div></div>
+    <div class="stat-card"><div class="stat-label">수학 최근 등급</div><div class="stat-value amber">2</div><div class="stat-sub">2025년 10월 학평</div></div>
+    <div class="stat-card"><div class="stat-label">영어 최근 등급</div><div class="stat-value green">2</div><div class="stat-sub">2025년 10월 학평</div></div>
   </div>
-
-  <!-- 내신 요약 -->
   <div class="card">
     <div class="card-title">내신 과목별 등급 변화</div>
     <div class="tbl-wrap">
       <table>
-        <thead>
-          <tr><th>과목</th><th>1학기</th><th>2학기</th><th>변화</th></tr>
-        </thead>
+        <thead><tr><th>과목</th><th>1학기</th><th>2학기</th><th>변화</th></tr></thead>
         <tbody>
           <tr><td>국어</td><td><span class="badge b2">2</span></td><td><span class="badge b2">2</span></td><td style="color:var(--muted);font-size:12px">유지</td></tr>
           <tr><td>수학</td><td><span class="badge b2">2</span></td><td><span class="badge b3">3</span></td><td><span class="tag-dn">↓ 하락</span></td></tr>
@@ -206,49 +216,29 @@ tr:hover td { background: #fafaf8; }
       </table>
     </div>
   </div>
-
-  <!-- 모의 최근 요약 -->
   <div class="card">
     <div class="card-title">모의고사 최근 4회 요약</div>
     <div class="tbl-wrap">
       <table>
-        <thead>
-          <tr><th>시험</th><th>국어</th><th>수학</th><th>영어</th><th>한국사</th></tr>
-        </thead>
+        <thead><tr><th>시험</th><th>국어</th><th>수학</th><th>영어</th><th>한국사</th></tr></thead>
         <tbody>
-          <tr>
-            <td style="color:var(--muted);font-size:12px">25.3월</td>
-            <td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b2">2</span></td><td><span class="badge b2">2</span></td>
-          </tr>
-          <tr>
-            <td style="color:var(--muted);font-size:12px">25.6월</td>
-            <td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b1">1</span> 🏆</td><td><span class="badge b1">1</span></td>
-          </tr>
-          <tr>
-            <td style="color:var(--muted);font-size:12px">25.9월</td>
-            <td><span class="badge b3">3</span></td><td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b3">3</span></td>
-          </tr>
-          <tr>
-            <td style="color:var(--muted);font-size:12px">25.10월</td>
-            <td><span class="badge b2">2</span> <span class="tag-up">↑</span></td><td><span class="badge b2">2</span> <span class="tag-up">↑</span></td><td><span class="badge b2">2</span></td><td><span class="badge b1">1</span></td>
-          </tr>
+          <tr><td style="color:var(--muted);font-size:12px">25.3월</td><td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b2">2</span></td><td><span class="badge b2">2</span></td></tr>
+          <tr><td style="color:var(--muted);font-size:12px">25.6월</td><td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b1">1</span> 🏆</td><td><span class="badge b1">1</span></td></tr>
+          <tr><td style="color:var(--muted);font-size:12px">25.9월</td><td><span class="badge b3">3</span></td><td><span class="badge b3">3</span></td><td><span class="badge b2">2</span></td><td><span class="badge b3">3</span></td></tr>
+          <tr><td style="color:var(--muted);font-size:12px">25.10월</td><td><span class="badge b2">2</span> <span class="tag-up">↑</span></td><td><span class="badge b2">2</span> <span class="tag-up">↑</span></td><td><span class="badge b2">2</span></td><td><span class="badge b1">1</span></td></tr>
         </tbody>
       </table>
     </div>
   </div>
-
 </div>
 
-<!-- ══════════ 내신 페이지 ══════════ -->
+<!-- ══════════ 내신 ══════════ -->
 <div id="page-naesin" class="page">
-
   <div class="card">
     <div class="card-title">고1 1학기 (2025) · 상문고등학교</div>
     <div class="tbl-wrap">
       <table>
-        <thead>
-          <tr><th>과목</th><th>단위</th><th>원점수</th><th>성취도</th><th>등급</th><th>석차</th><th>인원</th></tr>
-        </thead>
+        <thead><tr><th>과목</th><th>단위</th><th>원점수</th><th>성취도</th><th>등급</th><th>석차</th><th>인원</th></tr></thead>
         <tbody>
           <tr><td>공통국어1</td><td>4</td><td>84</td><td><span class="badge ba">A</span></td><td><span class="badge b2">2</span></td><td>116</td><td>395</td></tr>
           <tr><td>공통수학1</td><td>4</td><td>87</td><td><span class="badge ba">A</span></td><td><span class="badge b2">2</span></td><td>95</td><td>395</td></tr>
@@ -261,14 +251,11 @@ tr:hover td { background: #fafaf8; }
       </table>
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">고1 2학기 (2025) · 상문고등학교</div>
     <div class="tbl-wrap">
       <table>
-        <thead>
-          <tr><th>과목</th><th>단위</th><th>원점수</th><th>성취도</th><th>등급</th><th>석차</th><th>인원</th></tr>
-        </thead>
+        <thead><tr><th>과목</th><th>단위</th><th>원점수</th><th>성취도</th><th>등급</th><th>석차</th><th>인원</th></tr></thead>
         <tbody>
           <tr><td>공통국어2</td><td>4</td><td>84</td><td><span class="badge bb">B</span></td><td><span class="badge b2">2</span></td><td>109</td><td>380</td></tr>
           <tr><td>공통수학2</td><td>4</td><td>81</td><td><span class="badge bb">B</span></td><td><span class="badge b3">3</span> <span class="tag-dn">↓</span></td><td>161</td><td>380</td></tr>
@@ -282,25 +269,20 @@ tr:hover td { background: #fafaf8; }
     </div>
     <div style="margin-top:10px;font-size:12px;color:var(--muted);">⚠ 수학 2→3등급, 통합사회 2→3등급 하락 — 고2에서 집중 관리 필요</div>
   </div>
-
   <div class="card" style="background:#f0f9ff;">
     <div style="font-size:13px;font-weight:600;margin-bottom:4px;">고1 전체 내신 가중평균</div>
     <div style="font-size:32px;font-weight:700;color:#2563eb;">2.18 <span style="font-size:16px;font-weight:400;color:var(--muted);">등급</span></div>
     <div style="font-size:12px;color:var(--muted);margin-top:4px;">22단위 기준 · 체육·예술·탐구실험 제외</div>
   </div>
-
 </div>
 
-<!-- ══════════ 모의고사 페이지 ══════════ -->
+<!-- ══════════ 모의고사 ══════════ -->
 <div id="page-moui" class="page">
-
   <div class="card">
     <div class="card-title">회차별 영역 등급</div>
     <div class="tbl-wrap">
       <table>
-        <thead>
-          <tr><th>시험</th><th>국어</th><th>수학</th><th>영어</th><th>한국사</th><th>사회탐</th><th>과학탐</th></tr>
-        </thead>
+        <thead><tr><th>시험</th><th>국어</th><th>수학</th><th>영어</th><th>한국사</th><th>사회탐</th><th>과학탐</th></tr></thead>
         <tbody>
           <tr>
             <td style="color:var(--muted);font-size:12px;">2025년 3월</td>
@@ -326,7 +308,6 @@ tr:hover td { background: #fafaf8; }
       </table>
     </div>
   </div>
-
   <div class="spark-grid">
     <div class="spark-card">
       <div class="spark-name" style="font-weight:600;">사회탐구</div>
@@ -334,7 +315,7 @@ tr:hover td { background: #fafaf8; }
       <div class="spark-row"><span class="spark-exam">6월</span><span class="badge b3">3</span></div>
       <div class="spark-row"><span class="spark-exam">9월</span><span class="badge b4">4</span></div>
       <div class="spark-row"><span class="spark-exam">10월</span><span class="badge b4">4</span></div>
-      <div style="font-size:11px;color:#dc2626;margin-top:6px;">⚠ 지속 하락 중</div>
+      <div style="font-size:11px;color:#dc2626;margin-top:6px;">⚠ 지속 하락 중 — 집중 관리 필요</div>
     </div>
     <div class="spark-card">
       <div class="spark-name" style="font-weight:600;">과학탐구</div>
@@ -345,45 +326,561 @@ tr:hover td { background: #fafaf8; }
       <div style="font-size:11px;color:#16a34a;margin-top:6px;">✓ 상승세 유지 중</div>
     </div>
   </div>
+  <div style="font-size:11.5px;color:var(--muted);margin-top:4px;padding:0 4px;">영어 절대평가: 90점↑ 1등급 / 80점↑ 2등급 &nbsp;|&nbsp; 한국사 절대평가: 40점↑ 1등급</div>
+</div>
 
-  <div style="font-size:11.5px;color:var(--muted);margin-top:4px;padding:0 4px;">
-    영어 절대평가: 90점↑ 1등급 / 80점↑ 2등급 &nbsp;|&nbsp; 한국사 절대평가: 40점↑ 1등급
+<!-- ══════════ 추이 차트 ══════════ -->
+<div id="page-trend" class="page">
+  <div class="card">
+    <div class="card-title">국어 · 수학 등급 추이 (낮을수록 우수)</div>
+    <div class="chart-wrap"><canvas id="chart1"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">영어 · 탐구 등급 추이</div>
+    <div class="chart-wrap"><canvas id="chart2"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">원점수 추이</div>
+    <div class="chart-wrap" style="height:200px;"><canvas id="chart3"></canvas></div>
   </div>
 </div>
 
-<!-- ══════════ 추이 차트 페이지 ══════════ -->
-<div id="page-trend" class="page">
+<!-- ══════════ 대학 전형 ══════════ -->
+<div id="page-univ" class="page">
+
+  <!-- 대학 선택 버튼 -->
+  <div class="uni-nav">
+    <button class="uni-btn active" onclick="showUni('compare',this)">📊 전체 비교</button>
+    <button class="uni-btn" onclick="showUni('snu',this)">서울대</button>
+    <button class="uni-btn" onclick="showUni('ysei',this)">연세대</button>
+    <button class="uni-btn" onclick="showUni('korea',this)">고려대</button>
+    <button class="uni-btn" onclick="showUni('sgang',this)">서강대</button>
+    <button class="uni-btn" onclick="showUni('skku',this)">성균관대</button>
+    <button class="uni-btn" onclick="showUni('hyang',this)">한양대</button>
+    <button class="uni-btn" onclick="showUni('cau',this)">중앙대</button>
+    <button class="uni-btn" onclick="showUni('khu',this)">경희대</button>
+    <button class="uni-btn" onclick="showUni('uos',this)">서울시립대</button>
+    <button class="uni-btn" onclick="showUni('kku',this)">건국대</button>
+  </div>
+
+  <!-- ▸ 전체 비교 -->
+  <div id="uni-compare" class="uni-panel active">
+    <div class="card">
+      <div class="card-title">2028학년도 수시 — 수능최저 없는 주력 전형 비교</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>대학</th><th>등급대</th><th>전형명</th><th>인원</th><th>전형방법</th></tr></thead>
+          <tbody>
+            <tr><td><strong>서울대</strong></td><td><span class="tier tier-high">상향</span></td><td>학종(일반)</td><td>1,632명</td><td>서류 100%</td></tr>
+            <tr><td><strong>연세대</strong></td><td><span class="tier tier-high">상향</span></td><td>활동우수형</td><td>확인필요</td><td>서류→면접</td></tr>
+            <tr><td><strong>고려대</strong></td><td><span class="tier tier-reach">도전</span></td><td>학업우수형</td><td>확인필요</td><td>서류 100%</td></tr>
+            <tr><td><strong>서강대</strong></td><td><span class="tier tier-reach">도전</span></td><td>학종 서류형</td><td>확인필요</td><td>서류 100%</td></tr>
+            <tr><td><strong>성균관대</strong></td><td><span class="tier tier-fit">적정</span></td><td style="color:#166534;font-weight:600;">탐구인재 ★</td><td style="color:#166534;font-weight:600;">568명</td><td>서류 100%</td></tr>
+            <tr><td></td><td></td><td>성균인재(면접형)</td><td>222명</td><td>서류→면접30%</td></tr>
+            <tr><td><strong>한양대</strong></td><td><span class="tier tier-fit">적정</span></td><td style="color:#166534;font-weight:600;">면접형(학종) ★</td><td style="color:#166534;font-weight:600;">266명</td><td>서류→면접30%</td></tr>
+            <tr><td><strong>중앙대</strong></td><td><span class="tier tier-fit">적정</span></td><td style="color:#166534;font-weight:600;">Core(탐구) ★</td><td style="color:#166534;font-weight:600;">499명</td><td>서류→면접40%</td></tr>
+            <tr><td></td><td></td><td style="color:#166534;font-weight:600;">All(균형) ★</td><td style="color:#166534;font-weight:600;">384명</td><td>서류→면접40%</td></tr>
+            <tr><td><strong>경희대</strong></td><td><span class="tier tier-fit">적정</span></td><td>서류형(네오르네)</td><td>전체 30%</td><td>서류 100%</td></tr>
+            <tr><td></td><td></td><td>면접형(네오르네)</td><td>전체 70%</td><td>서류→면접</td></tr>
+            <tr><td><strong>서울시립대</strong></td><td><span class="tier tier-safe">안정</span></td><td style="color:#166534;font-weight:600;">학생부종합 ★</td><td style="color:#166534;font-weight:600;">424명</td><td>서류→면접50%</td></tr>
+            <tr><td><strong>건국대</strong></td><td><span class="tier tier-safe">안정</span></td><td>학종(단계별)</td><td>확인필요</td><td>서류→면접30%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">2028학년도 논술 전형 비교</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>대학</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>특이사항</th></tr></thead>
+          <tbody>
+            <tr><td><strong>고려대</strong></td><td>367명</td><td>논술 100%</td><td>확인필요</td><td>—</td></tr>
+            <tr><td><strong>성균관대</strong></td><td>376명</td><td>논술 100%</td><td>3합5~6</td><td>언어/수리형 구분</td></tr>
+            <tr><td><strong>경희대</strong></td><td>469명</td><td>논술 100%</td><td>있음(확인)</td><td>탐구 상위1과목</td></tr>
+            <tr><td><strong>중앙대</strong></td><td>482명</td><td>논술80+교과10+출결10</td><td>모두의 3합6 / <span style="color:#166534;font-weight:600;">재학생 없음 ★</span></td><td>재학생 논술 수능최저없음</td></tr>
+            <tr><td><strong>한양대</strong></td><td>289명</td><td>논술90+출결10</td><td>3합7</td><td>인문/자연/상경 구분</td></tr>
+            <tr><td><strong>건국대</strong></td><td>확인필요</td><td>논술 100%</td><td>있음</td><td style="color:#dc2626;">★ 출제 통합일원화 (인문도 수학 필수)</td></tr>
+            <tr><td><strong>서울시립대</strong></td><td>86명</td><td>논술 100%</td><td style="color:#dc2626;">3합7 <span style="font-size:10px;">(2028신설)</span></td><td>기존 수능최저없음→변경</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">2028학년도 정시 — 학생부 반영 현황</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>대학</th><th>수시 인원</th><th>정시 인원</th><th>정시 전형방법</th><th>학생부반영</th></tr></thead>
+          <tbody>
+            <tr><td>서울대</td><td>2,496</td><td>1,107</td><td>수능 + 교과평가</td><td>○</td></tr>
+            <tr><td>연세대</td><td>2,575</td><td>1,159</td><td>수능 + 학생부종합</td><td>○</td></tr>
+            <tr><td>고려대</td><td>2,703</td><td>1,617</td><td>수능 + 교과평가</td><td>○</td></tr>
+            <tr><td>서강대</td><td>확인필요</td><td>확인필요</td><td>확인필요</td><td>확인필요</td></tr>
+            <tr><td>성균관대</td><td>2,367</td><td>1,708</td><td>수능 100%</td><td>×</td></tr>
+            <tr><td>한양대</td><td>2,070</td><td>939</td><td>수능90+학생부10</td><td>○</td></tr>
+            <tr><td>중앙대</td><td>2,849</td><td>2,101</td><td>수능89+출결11 / <span style="color:#166534;">수능67+서류33</span></td><td>수능67형 ○</td></tr>
+            <tr><td>경희대</td><td>확인필요</td><td>확인필요</td><td>수능90+학생부10 (70%)</td><td>○ <span style="font-size:10px;color:#dc2626;">2028신설</span></td></tr>
+            <tr><td>서울시립대</td><td>확인필요</td><td>확인필요</td><td>수능80+교과18+출결2</td><td>○ <span style="font-size:10px;color:#dc2626;">2028신설</span></td></tr>
+            <tr><td>건국대</td><td>확인필요</td><td>확인필요</td><td>수능80+학생부20</td><td>○ <span style="font-size:10px;color:#dc2626;">2028신설</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">※ 중앙대 수시/정시는 서울+다빈치(안성) 합산 — 타 대학(서울캠퍼스만)과 단순 비교 시 유의</div>
+    </div>
+  </div>
+
+  <!-- ▸ 서울대 -->
+  <div id="uni-snu" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">서울대학교</div>
+        <span class="tier tier-high">상향</span>
+        <span style="font-size:12px;color:var(--muted);">총 3,603명 | 수시 2,496 / 정시 1,107</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr><td>학종(일반)</td><td>1,632명</td><td>서류 100%</td><td>없음</td><td>🔴 생기부 최상급 필요</td></tr>
+            <tr><td>지역균형(학종)</td><td>265명</td><td>서류+면접</td><td>○</td><td>🔴 상위 1~2%대 요구</td></tr>
+            <tr><td>정시 수능</td><td>1,107명</td><td>수능+교과평가</td><td>—</td><td>🔴 수능 1등급대 필요</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="warn" style="margin-top:12px;">현재 성적(내신 2.18, 모의 2~3등급) 기준 서울대는 상향 목표 대학. 수능 최상위권 달성 후 정시 또는 세계적 수준의 생기부로 학종 도전 가능. 지금은 성균관·한양·중앙 적정권 공략이 우선.</div>
+    </div>
+  </div>
+
+  <!-- ▸ 연세대 -->
+  <div id="uni-ysei" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">연세대학교</div>
+        <span class="tier tier-high">상향</span>
+        <span style="font-size:12px;color:var(--muted);">총 3,734명 | 수시 2,575 / 정시 1,159</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr><td>활동우수형</td><td>서류→면접</td><td>없음</td><td>🔴 내신 1등급대+뛰어난 활동력 필요</td></tr>
+            <tr><td>추천형(교과)</td><td>교과+면접</td><td>○</td><td>🔴 내신 1~2등급 초반 필요</td></tr>
+            <tr><td>논술</td><td>논술+교과</td><td>○ (신설)</td><td>🔴 수능최저+논술 모두 높은 수준</td></tr>
+            <tr><td>정시</td><td>수능+학생부종합</td><td>—</td><td>🔴 수능 최상위 필요</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="warn" style="margin-top:12px;">연세대는 상향 목표. 수능이 크게 상승하거나 생기부가 최상급일 경우 도전 가능. 2028학년도 정시에 학생부 반영이 추가됨.</div>
+    </div>
+  </div>
+
+  <!-- ▸ 고려대 -->
+  <div id="uni-korea" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">고려대학교</div>
+        <span class="tier tier-reach">도전</span>
+        <span style="font-size:12px;color:var(--muted);">총 4,320명 | 수시 2,703 / 정시 1,617</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr><td><strong>학업우수형</strong></td><td>서류 100%</td><td><strong>없음</strong></td><td>🟠 도전 — 수능최저없음이 장점, 생기부 내실 필요</td></tr>
+            <tr><td>계열적합형</td><td>서류→면접</td><td>없음</td><td>🟠 면접 역량 필요</td></tr>
+            <tr><td>학교추천형(교과)</td><td>교과+서류+면접</td><td>○</td><td>🟡 수능최저 달성 시 도전 가능</td></tr>
+            <tr><td>논술</td><td>논술 100%</td><td>확인필요</td><td>🟡 논술 준비 시 도전 가능</td></tr>
+            <tr><td>정시</td><td>수능+교과평가</td><td>—</td><td>🔴 수능 상위권 필요</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">고려대 학업우수형은 수능최저없음 + 서류100%로 접근 가능성 있음. 생기부 방향을 잡아 적극적으로 도전 고려 가능. 목표 학과 확정 후 계열적합형도 검토.</div>
+    </div>
+  </div>
+
+  <!-- ▸ 서강대 -->
+  <div id="uni-sgang" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">서강대학교</div>
+        <span class="tier tier-reach">도전</span>
+        <span style="font-size:12px;color:var(--muted);">모집인원 전년比 +92명 증가 | 세부 확인필요</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr><td>학종(서류형)</td><td>서류 100%</td><td>확인필요</td><td>🟠 도전 — 세부 수능최저 기준 확인 필요</td></tr>
+            <tr><td>학종(면접형)</td><td>서류→면접</td><td>없음</td><td>🟠 수능최저없음 전형 면접 준비 필요</td></tr>
+            <tr><td>학교장추천(교과)</td><td>교과+서류</td><td>○</td><td>🟡 수능최저 달성 시 적정권</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="warn" style="margin-top:12px;">⚠ 서강대 PDF 원문 확인 완료. 세부 모집인원 및 수능최저 기준은 공식 모집요강에서 재확인 권장.</div>
+    </div>
+  </div>
+
+  <!-- ▸ 성균관대 -->
+  <div id="uni-skku" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">성균관대학교</div>
+        <span class="tier tier-fit">적정</span>
+        <span style="font-size:12px;color:var(--muted);">총 4,144명 | 수시 2,367 / 정시 1,708</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>탐구인재 ★</strong></td><td><strong>568명</strong></td><td>서류 100%</td><td><strong>없음</strong></td><td>🟢 핵심 타깃 — 최대 규모+수능최저없음</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>성균인재(면접형) ★</strong></td><td><strong>222명</strong></td><td>서류→면접30%</td><td><strong>없음</strong></td><td>🟢 적극 고려 — 사회과학·공학 2028 추가</td></tr>
+            <tr><td>과학인재(면접형)</td><td>155명</td><td>서류→면접30%</td><td>없음</td><td>🟢 자연계열 희망 시 유효</td></tr>
+            <tr><td>융합인재(서류형)</td><td>325명</td><td>서류 100%</td><td>3합6</td><td>🟡 수능최저 달성 시 도전</td></tr>
+            <tr><td>추천인재(교과) ★</td><td>415명</td><td>정량70+정성30</td><td>3합6~7</td><td>🟢 내신 2.18 — 적정권</td></tr>
+            <tr><td>논술(언어+수리)</td><td>376명</td><td>논술 100%</td><td>3합5~6</td><td>🟡 수능최저 높은 편</td></tr>
+            <tr><td>정시 일반형</td><td>1,307명</td><td>수능 100%</td><td>—</td><td>🟡 수능 2등급대 목표 시 도전</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 수능최저 탐구 반영방식이 평균→분리로 변경 (충족 기회 확대). 성균인재 면접형에 사회과학계열·공학계열 신설. 추천인재 정성평가 30%로 확대.
+        <br>캠퍼스: 인문·사회·경영 = 서울 종로구 / 자연·공학·의학 = 경기 수원 (통학 거리 고려)
+      </div>
+    </div>
+  </div>
+
+  <!-- ▸ 한양대 -->
+  <div id="uni-hyang" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">한양대학교(서울)</div>
+        <span class="tier tier-fit">적정</span>
+        <span style="font-size:12px;color:var(--muted);">총 3,009명 | 수시 2,070 / 정시 939</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>면접형(학종) ★</strong></td><td><strong>266명</strong></td><td>서류→면접30%</td><td><strong>없음</strong></td><td>🟢 핵심 타깃 — 수능최저없음+면접</td></tr>
+            <tr><td>학업형(학종) ★</td><td>811명</td><td>서류 100%</td><td>3합7</td><td>🟢 3합7 달성 시 핵심 타깃 (대규모)</td></tr>
+            <tr><td>추천형(교과)</td><td>506명</td><td>교과60+종합40</td><td>각 3등급</td><td>🟢 수능최저 달성 시 적정권</td></tr>
+            <tr><td>논술</td><td>289명</td><td>논술90+출결10</td><td>3합7</td><td>🟡 수능최저 부담 있음</td></tr>
+            <tr><td>정시</td><td>939명</td><td>수능90+학생부10</td><td>—</td><td>🟡 현재 갭 있음</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 학업형 811명으로 대폭 확대 (서류형+추천형 통합). 사탐+과탐 모두 필수 응시 (수시·정시 모두). 추천형 추천 제한 폐지. 정시에 학생부종합평가 10% 반영.
+      </div>
+    </div>
+  </div>
+
+  <!-- ▸ 중앙대 -->
+  <div id="uni-cau" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">중앙대학교</div>
+        <span class="tier tier-fit">적정</span>
+        <span style="font-size:12px;color:var(--muted);">총 5,038명 | 수시 2,849 / 정시 2,101 (서울+다빈치캠퍼스)</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>탐구하는 학종(Core) ★</strong></td><td><strong>499명</strong></td><td>서류→면접40%</td><td><strong>없음</strong></td><td>🟢 핵심 타깃 — 탐구역량 평가</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>모두의 학종(All) ★</strong></td><td><strong>384명</strong></td><td>서류→면접40%</td><td><strong>없음</strong></td><td>🟢 핵심 타깃 — 균형 성적 강점</td></tr>
+            <tr><td>최저있는 학종(Up)</td><td>114명</td><td>서류 100%</td><td>3합6</td><td>🟡 수능최저 달성 시 도전</td></tr>
+            <tr><td>지역균형(교과)</td><td>505명</td><td>교과90+출결10</td><td>서울 3합7</td><td>🟢 내신 2.18 — 적정권</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>재학생 논술 ★</strong></td><td><strong>87명</strong></td><td>논술80+교과10+출결10</td><td><strong>없음</strong></td><td>🟢 수능최저없음 — 재학생 전용</td></tr>
+            <tr><td>모두의 논술</td><td>395명</td><td>논술80+교과10+출결10</td><td>3합6</td><td>🟡 수능최저 부담</td></tr>
+            <tr><td>정시 수능89</td><td>1,459명</td><td>수능89+출결11</td><td>—</td><td>🟡 현재 갭 있음</td></tr>
+            <tr><td>정시 수능67 ★</td><td>251명</td><td>수능67+서류33</td><td>3합7</td><td>🟡 생기부 관리 시 보완 가능</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 전형명 개편 (탐구형인재→Core, 융합형→All, 성장형→Up). 면접 비중 30→40%로 확대. 정시 수능67 신설 (서울 상위권 대학 중 정시 서류33% 반영 희귀). 재학생 논술은 수능최저없음+재학생전용의 틈새 전형.
+      </div>
+    </div>
+  </div>
+
+  <!-- ▸ 경희대 -->
+  <div id="uni-khu" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">경희대학교</div>
+        <span class="tier tier-fit">적정</span>
+        <span style="font-size:12px;color:var(--muted);">논술 469명 | 지역균형 580명 | 세부 확인필요</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>네오르네상스 서류형 ★</strong></td><td><strong>전체 30%</strong></td><td>서류 100%</td><td><strong>없음</strong></td><td>🟢 내신 절대등급(성취도) 반영 — 유리</td></tr>
+            <tr style="background:#f0fdf4;"><td><strong>네오르네상스 면접형 ★</strong></td><td><strong>전체 70%</strong></td><td>서류→면접</td><td><strong>없음</strong></td><td>🟢 면접 준비 시 경쟁력</td></tr>
+            <tr><td>지역균형(교과)</td><td>580명</td><td>교과+출결</td><td>확인필요</td><td>🟢 대규모 — 내신 2등급대 적정권</td></tr>
+            <tr><td>논술</td><td>469명</td><td>논술 100%</td><td>확인필요</td><td>🟢 규모 큼 — 논술 준비 시 도전</td></tr>
+            <tr><td>정시 수능·학생부형 ★</td><td>전체 70%</td><td>수능90+학생부10</td><td>—</td><td>🟢 내신 관리 시 정시 보완</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 네오르네상스 이원화 (서류형 신설 — 석차등급 미반영, 성취도만 반영). 탐구 수능최저 반영방식 2과목→상위1과목 변경. 정시 수능·학생부형 신설 (70% 선발).
+        <br>⚠ 경희대 PDF 일부 이미지 기반 — 세부 모집인원 공식 모집요강 확인 필요.
+      </div>
+    </div>
+  </div>
+
+  <!-- ▸ 서울시립대 -->
+  <div id="uni-uos" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">서울시립대학교</div>
+        <span class="tier tier-safe">안정</span>
+        <span style="font-size:12px;color:var(--muted);">전년比 +105명 증가 | 공립대학 (등록금 저렴)</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>인원</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>학생부종합 ★</strong></td><td><strong>424명</strong></td><td>서류→<strong>면접50%</strong></td><td><strong>없음</strong></td><td>🟢 안정 타깃 — 면접 비중 높음 주의</td></tr>
+            <tr><td>지역균형(교과)</td><td>346명</td><td>교과60+서류40</td><td>○ (2028신설)</td><td>🟢 수능최저 달성 시 안정권</td></tr>
+            <tr><td>논술</td><td>86명</td><td>논술 100%</td><td>○ (2028신설)</td><td>🟡 수능최저 신설로 부담 증가</td></tr>
+            <tr><td>정시</td><td>확인필요</td><td>수능80+교과18+출결2</td><td>—</td><td>🟢 내신 반영 — 내신 2.18 유리</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 학종 면접 비중 30→50%로 대폭 증가. 지역균형 지원자격 재학생만. 논술 수능최저 신설. 정시 수능100%→수능80+내신18+출결2. 수능 점수 백분위→표준점수 변경.
+        <br>서울시립대는 수시 안정카드로 포함 권장. 지역균형(346명)은 재학생 전용, 지금 지원 가능.
+      </div>
+    </div>
+  </div>
+
+  <!-- ▸ 건국대 -->
+  <div id="uni-kku" class="uni-panel">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="font-size:20px;font-weight:700;">건국대학교(서울)</div>
+        <span class="tier tier-safe">안정</span>
+        <span style="font-size:12px;color:var(--muted);">변경사항 PDF 확인 | 전체 모집요강 추가 확인 권장</span>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>전형명</th><th>전형방법</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+          <tbody>
+            <tr style="background:#f0fdf4;"><td><strong>학종(단계별) ★</strong></td><td>서류100%(3배수)→면접30%</td><td>확인필요</td><td>🟢 적정~안정 — 내신 2.18로 서류통과 가능</td></tr>
+            <tr><td>학종(일괄합산)</td><td>서류70+교과30</td><td>없음</td><td>🟢 안정권</td></tr>
+            <tr><td>논술</td><td>논술 100%</td><td>○</td><td>🟡 인문도 수학 필수 (통합출제) 주의</td></tr>
+            <tr><td>정시</td><td>수능80+학생부20</td><td>—</td><td>🟢 학생부 20% 반영 — 내신 유리</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice" style="margin-top:12px;">
+        <strong>2028 핵심 변화:</strong> 정시 수능100%→수능80+학생부(정성)20. 논술 출제유형 통합 일원화 (인문/자연 구분 폐지, 전 계열 국어+통합사회+수학 동일 출제).
+        <br>⚠ 건국대는 "변경사항" 문서만 확인됨 — 전체 모집요강(수능최저 상세 등) 별도 확인 필요.
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-univ -->
+
+<!-- ══════════ 지원 전략 ══════════ -->
+<div id="page-strategy" class="page">
+  <div class="notice">🎯 목표 대학/학과 미확정 상태 — 확정 후 맞춤 전략으로 업데이트 예정 (현재는 현 성적 기준 일반 전략)</div>
 
   <div class="card">
-    <div class="card-title">국어 · 수학 등급 추이 (낮을수록 우수)</div>
-    <div class="chart-wrap">
-      <canvas id="chart1" role="img" aria-label="국어 수학 등급 추이 차트">국어: 3,3,3,2 / 수학: 2,2,3,2</canvas>
+    <div class="card-title2">수시 1순위 — 수능최저 없는 학종 (지금 집중 대상)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>대학</th><th>전형</th><th>인원</th><th>면접</th><th>판정</th></tr></thead>
+        <tbody>
+          <tr style="background:#f0fdf4;"><td><strong>성균관대</strong></td><td>탐구인재</td><td>568명</td><td>없음</td><td>🟢 핵심</td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>성균관대</strong></td><td>성균인재(면접형)</td><td>222명</td><td>30%</td><td>🟢 핵심</td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>중앙대</strong></td><td>Core(탐구하는학종)</td><td>499명</td><td>40%</td><td>🟢 핵심</td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>중앙대</strong></td><td>All(모두의학종)</td><td>384명</td><td>40%</td><td>🟢 핵심</td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>한양대</strong></td><td>면접형(학종)</td><td>266명</td><td>30%</td><td>🟢 핵심</td></tr>
+          <tr><td>서울시립대</td><td>학생부종합</td><td>424명</td><td>50%</td><td>🟢 안정</td></tr>
+          <tr><td>경희대</td><td>네오르네상스 면접형</td><td>전체 70%</td><td>있음</td><td>🟢 적정</td></tr>
+          <tr><td>경희대</td><td>네오르네상스 서류형</td><td>전체 30%</td><td>없음</td><td>🟢 적정</td></tr>
+          <tr><td>건국대</td><td>학종(단계별)</td><td>확인필요</td><td>30%</td><td>🟢 안정</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title">영어 · 탐구 등급 추이</div>
-    <div class="chart-wrap">
-      <canvas id="chart2" role="img" aria-label="영어 탐구 등급 추이 차트">영어: 2,1,2,2 / 사회탐구: 1,3,4,4 / 과학탐구: 3,3,2,2</canvas>
+    <div class="card-title2">수시 2순위 — 수능최저 충족 조건부 전형 (수능 향상 시)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>대학</th><th>전형</th><th>인원</th><th>수능최저</th></tr></thead>
+        <tbody>
+          <tr><td>한양대</td><td>학업형(학종)</td><td>811명</td><td>3합7 (국수영사탐과탐 중 3개)</td></tr>
+          <tr><td>중앙대</td><td>지역균형(교과)</td><td>505명 (서울)</td><td>3합7</td></tr>
+          <tr><td>성균관대</td><td>추천인재(교과)</td><td>415명</td><td>3합6~7</td></tr>
+          <tr><td>경희대</td><td>지역균형(교과)</td><td>580명</td><td>확인필요</td></tr>
+          <tr><td>서울시립대</td><td>지역균형(교과)</td><td>346명</td><td>신설(확인필요)</td></tr>
+          <tr><td>고려대</td><td>학업우수형</td><td>확인필요</td><td>없음 — 하지만 생기부 내실 필요</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title">원점수 추이</div>
-    <div class="chart-wrap" style="height:200px;">
-      <canvas id="chart3" role="img" aria-label="원점수 추이 바 차트">국어, 수학, 영어 원점수 비교</canvas>
+    <div class="card-title2">수시 틈새 전략 — 논술 · 특화 전형</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>전형</th><th>대학</th><th>인원</th><th>수능최저</th><th>전략포인트</th></tr></thead>
+        <tbody>
+          <tr style="background:#f0fdf4;"><td><strong>재학생 논술 ★</strong></td><td>중앙대</td><td>87명</td><td><strong>없음</strong></td><td>수능최저없음+재학생전용 틈새</td></tr>
+          <tr><td>논술</td><td>경희대</td><td>469명</td><td>있음</td><td>규모 큼 — 논술 준비 가치</td></tr>
+          <tr><td>논술</td><td>성균관대</td><td>376명</td><td>3합5~6</td><td>인문(언어형)/자연(수리형) 구분</td></tr>
+          <tr><td>논술</td><td>한양대</td><td>289명</td><td>3합7</td><td>수능최저 부담 적은 편</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-top:8px;">⚠ 건국대 논술은 2028년부터 인문계열도 수학 3문항 포함 통합 출제 — 인문 지망 시 수학 준비 필수</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title2">정시 대비 현황</div>
+    <div class="strat-grid">
+      <div class="strat-card">
+        <div class="strat-head">🎯 수능 목표 등급</div>
+        <div class="strat-body">
+          국어: 현재 2등급 → 목표 1~2등급 유지<br>
+          수학: 현재 2~3등급 → 목표 2등급 안정<br>
+          영어: 현재 2등급 → 목표 1등급 (90점↑)<br>
+          탐구: 사탐 4등급 → 2등급↑ (집중 필요)<br>
+          과탐: 2등급 유지 → 목표
+        </div>
+      </div>
+      <div class="strat-card amber">
+        <div class="strat-head">⚠ 사탐 집중 관리 필요</div>
+        <div class="strat-body">
+          사탐이 4등급 수준에서 정체 — 수능최저 충족에 가장 큰 걸림돌.<br>
+          2028 통합수능은 통합사회·통합과학 공통 응시 → 탐구 2과목 모두 대비 필수.
+        </div>
+      </div>
+      <div class="strat-card green">
+        <div class="strat-head">📌 생기부 → 정시에도 유효</div>
+        <div class="strat-body">
+          성균관대 제외 주요 대학 대부분이 정시에서도 학생부 반영.<br>
+          생기부 관리가 수시만의 전략이 아님 — 정시 경쟁력에도 직결.
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px;font-size:12.5px;color:var(--muted);">
+      ※ 목표 대학/학과 미확정 상태 — 학과 결정 후 전형 맞춤 상세 전략 작성 예정
     </div>
   </div>
 
+  <div class="card" style="background:#f9f8f5;">
+    <div class="card-title2">📋 지원 전략 파일 목록</div>
+    <div style="font-size:13px;color:var(--muted);">
+      <div style="padding:8px 0;border-bottom:1px solid var(--border);">outputs/지원전략/ — <em>아직 파일 없음 · 목표 학과 확정 후 맞춤 전략 문서 작성 예정</em></div>
+      <div style="padding:8px 0;">outputs/분석리포트/고1_전체_성적분석_2026-05-02.md — <em>고1 내신 분석 완료</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 과목 플랜 ══════════ -->
+<div id="page-plan" class="page">
+  <div class="notice">📚 현재 고2 1학기 진행 중 — 과목별 플랜은 고2 1학기 내신 확인 후 업데이트 예정</div>
+
+  <div class="card">
+    <div class="card-title2">현재 과목별 상태 (고1 전체 기준)</div>
+
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>국어</span><span>2등급 (내신) / 2~3등급 (모의)</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:75%;background:#2563eb;"></div></div>
+    </div>
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>수학 ⚠</span><span>2→3등급 하락 (내신) / 2~3등급 (모의)</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:55%;background:#d97706;"></div></div>
+    </div>
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>영어</span><span>2등급 안정 (내신/모의)</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:80%;background:#16a34a;"></div></div>
+    </div>
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>한국사</span><span>2등급 안정</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:78%;background:#16a34a;"></div></div>
+    </div>
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>통합사회(사탐) ⚠⚠</span><span>2→3등급 하락 / 모의 4등급 수준</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:35%;background:#dc2626;"></div></div>
+    </div>
+    <div class="sub-bar-wrap">
+      <div class="sub-bar-label"><span>통합과학(과탐)</span><span>2등급 유지 (내신/모의 상승세)</span></div>
+      <div class="sub-bar-track"><div class="sub-bar-fill" style="width:70%;background:#2563eb;"></div></div>
+    </div>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:10px;">막대 길이는 목표 대비 현재 달성도 표시 (주관적 추정)</div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title2">🔴 최우선 관리 — 수학·사탐</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">
+        <strong>수학:</strong> 고1 2학기 3등급 → 고2에서 2등급 회복 목표<br>
+        <strong>사탐(통합사회):</strong> 모의 4등급대 → 2등급↑ 목표<br>
+        — 탐구 4등급은 수능최저 충족 불가 — 수시 대부분 영향<br><br>
+        <span style="font-size:12px;color:var(--muted);font-style:italic;">과목별 상세 플랜은 outputs/과목별플랜/ 에 추가 예정</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title2">🟢 강점 유지 — 영어·과탐</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">
+        <strong>영어:</strong> 2등급 안정 → 1등급(90점↑) 목표<br>
+        — 수능 영어 1등급은 수능최저에서 강점<br>
+        <strong>과탐:</strong> 9·10월 2등급 상승세 유지<br>
+        — 사탐+과탐 모두 응시 (2028 통합수능 필수)<br><br>
+        <span style="font-size:12px;color:var(--muted);font-style:italic;">세부 강화 전략 추후 업데이트</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title2">📅 앞으로의 주요 일정</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>시기</th><th>내용</th><th>액션 아이템</th></tr></thead>
+        <tbody>
+          <tr><td>2026년 (현재)</td><td>고2 1학기 내신 관리</td><td>수학·사탐 등급 회복 목표</td></tr>
+          <tr><td>2026년 하반기</td><td>목표 대학/학과 확정</td><td>진로 방향 결정 → 생기부 방향 설정</td></tr>
+          <tr><td>2026년~2027년</td><td>생기부 집중 관리 (고2~고3)</td><td>수능최저없는 학종 목표 전형 맞춤</td></tr>
+          <tr><td>2027년 9월</td><td>수시 원서 접수 (고3)</td><td>지원 대학 6개 최종 확정</td></tr>
+          <tr><td>2027년 11월</td><td>2027학년도 수능 모의 응시</td><td>실전 경험 + 전략 보완</td></tr>
+          <tr><td>2028년 9월</td><td>최종 수시 원서 접수</td><td>2028학년도 수시 6개 지원</td></tr>
+          <tr><td>2028년 11월</td><td><strong>2028학년도 수능</strong></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="background:#f9f8f5;">
+    <div class="card-title2">📋 과목 플랜 파일 목록</div>
+    <div style="font-size:13px;color:var(--muted);">
+      <div style="padding:8px 0;">outputs/과목별플랜/ — <em>아직 파일 없음 · 고2 1학기 성적 확인 후 과목별 상세 계획 작성 예정</em></div>
+    </div>
+  </div>
 </div>
 
 <script>
-function showPage(name) {
+function showPage(name, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
-  event.currentTarget.classList.add('active');
+  btn.classList.add('active');
   if (name === 'trend' && !window.chartsBuilt) buildCharts();
+}
+
+function showUni(id, btn) {
+  document.querySelectorAll('.uni-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.uni-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('uni-' + id).classList.add('active');
+  btn.classList.add('active');
 }
 
 function buildCharts() {
@@ -400,4 +897,46 @@ function buildCharts() {
     data: {
       labels,
       datasets: [
-        { l
+        { label: '국어', data: [3,3,3,2], borderColor: '#2563eb', backgroundColor: '#2563eb22', tension: .3, pointRadius: 5, fill: true },
+        { label: '수학', data: [2,2,3,2], borderColor: '#d97706', backgroundColor: '#d9770622', tension: .3, pointRadius: 5, fill: true }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: scaleOpts, plugins: { legend: { position: 'top' } } }
+  });
+
+  new Chart(document.getElementById('chart2'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: '영어', data: [2,1,2,2], borderColor: '#16a34a', tension: .3, pointRadius: 5 },
+        { label: '사회탐구', data: [1,3,4,4], borderColor: '#dc2626', tension: .3, pointRadius: 5 },
+        { label: '과학탐구', data: [3,3,2,2], borderColor: '#7c3aed', tension: .3, pointRadius: 5 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: scaleOpts, plugins: { legend: { position: 'top' } } }
+  });
+
+  new Chart(document.getElementById('chart3'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: '국어', data: [67,68,71,81], backgroundColor: '#2563eb88', borderRadius: 4 },
+        { label: '수학', data: [74,77,69,85], backgroundColor: '#d9770688', borderRadius: 4 },
+        { label: '영어', data: [88,100,85,85], backgroundColor: '#16a34a88', borderRadius: 4 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { min: 50, max: 105, ticks: { callback: v => v + '점' }, grid: { color: gridColor } },
+        x: { grid: { display: false } }
+      },
+      plugins: { legend: { position: 'top' } }
+    }
+  });
+}
+</script>
+</body>
+</html>
