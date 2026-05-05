@@ -751,26 +751,64 @@ tr:hover td { background: #fafaf8; }
     </div>
   </div>
 
+  <!-- 등급 체계 안내 박스 -->
+  <div style="background:#fff7ed;border:1.5px solid #f59e0b;border-radius:12px;padding:14px 16px;margin-bottom:14px;">
+    <div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:8px;">⚠️ 내신 등급 체계 변환 안내 — 반드시 확인</div>
+    <div style="font-size:12.5px;color:#78350f;line-height:1.8;">
+      <strong>2028학년도 대입부터 내신 등급이 9등급제 → 5등급제로 전면 전환됩니다.</strong><br>
+      환희의 현재 성적(고1)은 이미 5등급제 기준입니다.<br>
+      ▪ 5등급제: 1등급(상위 0~10%) · <strong>2등급(상위 10~34%)</strong> · 3등급(34~66%) · 4등급(66~90%) · 5등급(90~100%)<br>
+      ▪ 9등급제: 1등급(0~4%) · <strong>2등급(4~11%)</strong> · 3등급(11~23%) · 4등급(23~40%) …<br><br>
+      <strong>핵심:</strong> 환희의 "2등급"(5등급 기준, 상위 10~34%)은 예전 "2등급"(9등급 기준, 상위 4~11%)과 전혀 다른 학력 수준입니다.<br>
+      → 환희 고1 내신 실제 평균 백분위: <strong>약 28.3%</strong> (석차 기반 직접 계산)
+    </div>
+  </div>
+
   <!-- 목표 학과 × 대학별 합격선 매트릭스 -->
   <div class="card">
-    <div class="card-title2">📊 목표 학과 × 대학별 합격선 매트릭스 <span style="font-size:11px;color:var(--muted);font-weight:400;">(반도체/AI · 전자전기 계열 기준)</span></div>
+    <div class="card-title2">📊 목표 학과 × 대학별 합격선 매트릭스
+      <span style="font-size:11px;color:#166534;font-weight:600;background:#dcfce7;padding:2px 8px;border-radius:8px;margin-left:6px;">5등급제 기준 전환</span>
+    </div>
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>대학</th><th>목표 학과</th><th>전형</th><th>내신합격선(추정)</th><th>수능최저</th><th>환희 판정</th></tr></thead>
+        <thead>
+          <tr>
+            <th>대학</th><th>목표 학과</th><th>전형</th>
+            <th>합격선(5등급 추정)</th><th>백분위 기준</th><th>수능최저</th><th>환희 판정</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td rowspan="2"><strong>성균관대</strong></td><td>전자전기정보공학부</td><td>탐구인재</td><td>2등급 초반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
-          <tr><td>글로벌AI융합학부</td><td>탐구인재</td><td>2등급 초중반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-fit">적정</span></td></tr>
-          <tr><td rowspan="2"><strong>한양대</strong></td><td>전자공학부</td><td>면접형(학종)</td><td>2등급 초반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
-          <tr><td>반도체공학과</td><td>면접형(학종)</td><td>2등급 초중반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-fit">적정</span></td></tr>
-          <tr><td><strong>서강대</strong></td><td>전자공학과</td><td>학종</td><td>2등급 초반</td><td>확인필요</td><td><span class="tier tier-reach">도전</span></td></tr>
-          <tr><td rowspan="2"><strong>중앙대</strong></td><td>전자전기공학부</td><td>Core학종</td><td>2등급 중반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-fit">적정</span></td></tr>
-          <tr><td>AI학과</td><td>Core학종</td><td>2등급 초중반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-fit">적정</span></td></tr>
-          <tr><td><strong>서울시립대</strong></td><td>전자전기컴퓨터공학부</td><td>학생부종합</td><td>2등급 중반</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-safe">안정</span></td></tr>
-          <tr><td><strong>건국대</strong></td><td>전기전자공학부</td><td>학종(단계별)</td><td>2등급 후반</td><td>확인필요</td><td><span class="tier tier-safe">안정</span></td></tr>
+          <tr><td rowspan="2"><strong>성균관대</strong></td><td>전자전기정보공학부</td><td>탐구인재(학종)</td><td>1등급 중반~후반<br><span style="font-size:10.5px;color:#6b7280;">교과전형 9등급 1.39→학종 추정</span></td><td style="color:#dc2626;">상위 5~10%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td>글로벌AI융합학부</td><td>탐구인재(학종)</td><td>1등급 후반~2등급 초반<br><span style="font-size:10.5px;color:#6b7280;">전자전기와 유사 수준 추정</span></td><td style="color:#dc2626;">상위 8~15%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td rowspan="2"><strong>한양대</strong></td><td>전자공학부</td><td>면접형(학종)</td><td>1등급 후반~2등급 초반<br><span style="font-size:10.5px;color:#6b7280;">추천형학종 평균 9등급 2.53 참고</span></td><td style="color:#dc2626;">상위 8~15%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td>반도체공학과</td><td>면접형(학종)</td><td>2등급 초반<br><span style="font-size:10.5px;color:#6b7280;">전자공학부 유사 수준 추정</span></td><td style="color:#dc2626;">상위 10~18%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td><strong>서강대</strong></td><td>전자공학과</td><td>학종</td><td>1등급 후반~2등급 초반<br><span style="font-size:10.5px;color:#6b7280;">교과전형 9등급 1.39→학종 추정</span></td><td style="color:#dc2626;">상위 8~15%</td><td>확인필요</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td rowspan="2"><strong>중앙대</strong></td><td>전자전기공학부</td><td>학종(탐구형인재)</td><td>1등급 후반~2등급 초반<br><span style="font-size:10.5px;color:#6b7280;">학종전체평균 9등급 3.3, 전자전기는 하향추정</span></td><td style="color:#d97706;">상위 10~20%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td>AI학과</td><td>학종(탐구형인재)</td><td>2등급 초중반<br><span style="font-size:10.5px;color:#6b7280;">전자전기와 유사 수준 추정</span></td><td style="color:#d97706;">상위 12~22%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-reach">도전</span></td></tr>
+          <tr><td><strong>서울시립대</strong></td><td>전자전기컴퓨터공학부</td><td>학생부종합</td><td>2등급 초중반<br><span style="font-size:10.5px;color:#6b7280;">학종 참고값 9등급 약 2.5~3.0 추정</span></td><td style="color:#d97706;">상위 15~22%</td><td style="color:#166534;font-weight:600;">없음 ★</td><td><span class="tier tier-fit">적정</span></td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>건국대</strong></td><td>전기전자공학부</td><td>KU자기추천(학종)</td><td>2등급 중반~후반<br><span style="font-size:10.5px;color:#6b7280;">교과전형 9등급 1.60→학종은 더 낮음 추정</span></td><td style="color:#16a34a;">상위 22~32%</td><td>수능최저없음</td><td><span class="tier tier-safe">안정</span></td></tr>
         </tbody>
       </table>
     </div>
-    <div style="font-size:11.5px;color:var(--muted);margin-top:8px;">⚠ 합격선은 추정치 — 학과별 실제 입결 데이터 별도 확인 필요 / 현재 환희 내신 2.18 기준</div>
+
+    <!-- 환희 현재 위치 표시 -->
+    <div style="margin-top:14px;padding:12px 14px;background:#eff6ff;border-radius:10px;border:1.5px solid #bfdbfe;">
+      <div style="font-size:12px;font-weight:700;color:#1e40af;margin-bottom:6px;">📍 환희 현재 위치 (고1 내신 기준)</div>
+      <div style="font-size:12.5px;color:#1e3a8a;line-height:1.8;">
+        평균 백분위 <strong>약 28.3%</strong> → <strong>5등급제 2등급 후반</strong> (상위 25~30% 구간)<br>
+        ※ 9등급 환산 시 약 <strong>4등급 초반</strong> — 기존 9등급제 합격선 "2등급 초반"과 직접 비교 불가<br>
+        → <strong>건국대 학종 안정권</strong> (합격선 상위 22~32%, 환희 28.3%와 겹침)<br>
+        → <strong>서울시립대·중앙대 적정~도전권</strong> (합격선 상위 10~22%, 약 5~15% 향상 필요)<br>
+        → <strong>성균관대·한양대·서강대 강한 도전권</strong> (합격선 상위 5~15%, 약 15~25% 향상 필요)
+      </div>
+    </div>
+
+    <div style="font-size:11.5px;color:#92400e;margin-top:10px;background:#fff7ed;padding:8px 12px;border-radius:8px;">
+      ⚠️ <strong>데이터 출처 및 한계</strong><br>
+      실제 입결 근거(9등급제): 성균관대 교과전형 1.39, 한양대 추천형학종 평균 2.53, 서강대 교과 1.39, 중앙대 학종전체평균 3.3, 건국대 교과 1.60 (2025·2026학년도 공개 데이터)<br>
+      위 교과전형 데이터를 <strong>학종 합격선으로 환산 시 약 1~1.5등급 완화</strong>하여 추정. 학종은 내신 외 서류·면접이 큰 비중을 차지하므로 실제 합격 범위는 더 넓을 수 있음.<br>
+      <strong>2028학년도 5등급제 실적 데이터는 존재하지 않음</strong> — 방향성 참고용으로만 활용, 2027학년도 결과 공개 후 재검토 필요.
+    </div>
   </div>
 
   <!-- 수시 로드맵 + 정시 목표 -->
@@ -781,12 +819,12 @@ tr:hover td { background: #fafaf8; }
         <table>
           <thead><tr><th>#</th><th>대학</th><th>전형</th><th>티어</th></tr></thead>
           <tbody>
-            <tr style="background:#fef2f2;"><td>1</td><td><strong>성균관대</strong></td><td>탐구인재(전자전기/AI)</td><td><span class="tier tier-reach">도전</span></td></tr>
+            <tr style="background:#fef2f2;"><td>1</td><td><strong>성균관대</strong></td><td>탐구인재(전자전기/AI)</td><td><span class="tier tier-reach">강한도전</span></td></tr>
             <tr style="background:#fef2f2;"><td>2</td><td><strong>한양대</strong></td><td>면접형(전자공학/반도체)</td><td><span class="tier tier-reach">도전</span></td></tr>
-            <tr style="background:#fef3c7;"><td>3</td><td><strong>서강대/중앙대</strong></td><td>학종(전자 계열)</td><td><span class="tier tier-fit">적정</span></td></tr>
-            <tr style="background:#fef3c7;"><td>4</td><td><strong>중앙대</strong></td><td>Core학종(전자전기/AI)</td><td><span class="tier tier-fit">적정</span></td></tr>
-            <tr style="background:#dcfce7;"><td>5</td><td><strong>서울시립대</strong></td><td>학생부종합(전자전기컴)</td><td><span class="tier tier-safe">안정</span></td></tr>
-            <tr style="background:#dcfce7;"><td>6</td><td><strong>건국대</strong></td><td>학종 단계별</td><td><span class="tier tier-safe">안정</span></td></tr>
+            <tr style="background:#fef2f2;"><td>3</td><td><strong>서강대/중앙대</strong></td><td>학종(전자 계열)</td><td><span class="tier tier-reach">도전</span></td></tr>
+            <tr style="background:#fef2f2;"><td>4</td><td><strong>중앙대</strong></td><td>탐구형인재(전자전기/AI)</td><td><span class="tier tier-reach">도전</span></td></tr>
+            <tr style="background:#fef3c7;"><td>5</td><td><strong>서울시립대</strong></td><td>학생부종합(전자전기컴)</td><td><span class="tier tier-fit">적정</span></td></tr>
+            <tr style="background:#dcfce7;"><td>6</td><td><strong>건국대</strong></td><td>KU자기추천(학종)</td><td><span class="tier tier-safe">안정</span></td></tr>
           </tbody>
         </table>
       </div>
