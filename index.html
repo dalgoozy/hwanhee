@@ -883,11 +883,11 @@ tr:hover td { background: #fafaf8; }
         </div>
       </div>
       <div class="strat-card green">
-        <div class="strat-head">⚡ 물리학 세특</div>
+        <div class="strat-head">⚡ 물리학 세특 (4학기 로드맵 ↓)</div>
         <div class="strat-body">
-          전자기 유도, 반도체 원리, 회로 이론 연계 탐구.<br>
-          전자전기공학 지원 학생으로서 물리-공학 연결 주제 선택.<br>
-          <strong>물리학 이수 여부 즉시 확인 필요.</strong>
+          관통 키워드 <strong>"신호(Signal)"</strong> — 회로 → 반도체 → AI를 한 줄로.<br>
+          학기마다 같은 줄기를 더 깊이 파고드는 점진 심화 설계.<br>
+          <strong>아래 카드에서 학기별 주제 확인.</strong>
         </div>
       </div>
       <div class="strat-card amber">
@@ -909,11 +909,79 @@ tr:hover td { background: #fafaf8; }
     </div>
   </div>
 
+  <!-- 물리 세특 4학기 점진 심화 로드맵 -->
+  <div class="card">
+    <div class="card-title2">⚛️ 물리 세특 4학기 점진 심화 로드맵</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6;">
+      관통 키워드 <strong style="color:#1d4ed8;">신호(Signal)</strong> — 학기마다 도구가 깊어지고, 마지막에 처음 의문이 회수되는 단일 서사.
+      성균관대 탐구인재·과학인재, 한양대 면접형(공과대학 제시문) 평가 라인 정조준.
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+
+      <div style="background:#dcfce7;border-left:4px solid #16a34a;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#166534;letter-spacing:.05em;margin-bottom:6px;">STAGE 0 · 고2 1학기 (현재)</div>
+        <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">옴의 법칙 vs 다이오드 비선형성</div>
+        <div style="font-size:12.5px;color:#374151;line-height:1.55;">
+          <strong>핵심 질문</strong>: 다이오드는 왜 옴의 법칙을 따르지 않는가?<br>
+          <strong>활동</strong>: 저항·다이오드·LED·꼬마전구 V-I 그래프 비교 실험 + 보고서<br>
+          <strong>의도</strong>: 의문을 <em>1년간 묵혀두는</em> 씨앗
+        </div>
+      </div>
+
+      <div style="background:#dbeafe;border-left:4px solid #2563eb;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#1e40af;letter-spacing:.05em;margin-bottom:6px;">STAGE 1 · 고2 2학기</div>
+        <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">RC 회로 미분방정식 + 푸리에 직관</div>
+        <div style="font-size:12.5px;color:#374151;line-height:1.55;">
+          <strong>핵심 질문</strong>: 회로의 시간 거동을 수학·코드로 풀 수 있는가?<br>
+          <strong>활동</strong>: 키르히호프 → 1차 미방 유도 → Python Euler 수치해 → 저역통과 필터 해석<br>
+          <strong>의도</strong>: <em>수학·코딩 도구 장착</em>
+        </div>
+      </div>
+
+      <div style="background:#fef3c7;border-left:4px solid #d97706;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#92400e;letter-spacing:.05em;margin-bottom:6px;">STAGE 2 · 고3 1학기</div>
+        <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">양자역학 → p-n 접합 → MOSFET</div>
+        <div style="font-size:12.5px;color:#374151;line-height:1.55;">
+          <strong>핵심 질문</strong>: 양자역학으로 트랜지스터를, 무어의 법칙의 한계를 설명할 수 있는가?<br>
+          <strong>활동</strong>: 광전효과·플랑크 상수 추출 → 에너지 밴드 → 슈클리 다이오드식 → MOSFET → GAA·EUV·HBM<br>
+          <strong>의도</strong>: <em>Stage 0 의문 회수</em> · 학부 1~2학년 침투
+        </div>
+      </div>
+
+      <div style="background:#fee2e2;border-left:4px solid #dc2626;border-radius:10px;padding:14px 16px;">
+        <div style="font-size:11px;font-weight:700;color:#991b1b;letter-spacing:.05em;margin-bottom:6px;">STAGE 3 · 고3 2학기</div>
+        <div style="font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">Hopfield 네트워크 = 이징 모델</div>
+        <div style="font-size:12.5px;color:#374151;line-height:1.55;">
+          <strong>핵심 질문</strong>: 신경망 학습 = 에너지 최소화? 물리는 어떻게 AI의 모태가 되었는가?<br>
+          <strong>활동</strong>: 4×4 픽셀 Hopfield Python 구현 + 경사하강법 ↔ 위치에너지 최소화 동치 정리<br>
+          <strong>의도</strong>: <em>2024 노벨물리상 시의성 + 4학기 결산</em>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:14px;padding:12px 14px;background:#f5f4f0;border-radius:10px;font-size:13px;line-height:1.6;color:#374151;">
+      <strong style="color:#1d4ed8;">서사 한 줄</strong> — "고2 1학기에 옴의 법칙을 따르지 않는 다이오드가 궁금했던 학생이 → 고2 2학기에 회로의 미분방정식을 풀고 → 고3 1학기에 그 다이오드를 양자역학으로 다시 설명해내고 → 고3 2학기에 Hopfield 네트워크가 사실 자석의 물리(이징 모델)라는 것을 발견한 이야기."
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+      <a href="outputs/세특/물리_세특_4학기_심화_로드맵_2026-05.docx"
+         style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px;font-size:13px;font-weight:600;">
+        📄 4학기 로드맵 보고서 (Word) 열기
+      </a>
+      <a href="outputs/세특/물리_세특_4학기_심화_로드맵_2026-05.md"
+         style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:#fff;color:#2563eb;text-decoration:none;border-radius:8px;font-size:13px;font-weight:600;border:1.5px solid #2563eb;">
+        📝 Markdown 원본
+      </a>
+    </div>
+  </div>
+
   <div class="card" style="background:#f9f8f5;">
     <div class="card-title2">📋 전략 파일 목록</div>
     <div style="font-size:13px;color:var(--muted);">
       <div style="padding:8px 0;border-bottom:1px solid var(--border);">✅ outputs/지원전략/학과목표_전략분석_202605.md — <em>2026.05.05 작성 완료</em></div>
-      <div style="padding:8px 0;">outputs/분석리포트/고1_전체_성적분석_2026-05-02.md — <em>고1 내신 분석 완료</em></div>
+      <div style="padding:8px 0;border-bottom:1px solid var(--border);">outputs/분석리포트/고1_전체_성적분석_2026-05-02.md — <em>고1 내신 분석 완료</em></div>
+      <div style="padding:8px 0;">⚛️ outputs/세특/물리_세특_4학기_심화_로드맵_2026-05.docx — <em>2026.05.09 작성 완료 (Word + Markdown)</em></div>
     </div>
   </div>
 </div>
